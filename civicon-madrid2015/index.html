@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CiviCRM como herramienta de gestión para entidades de acción social</title>
+
+		<meta name="description" content="Las entidades de acción social que trabajan con distintos colectivos con riesgo de exclusión social tienen la oportunidad de mejorar su gestión gracias a herramientas tipo CiviCRM.">
+		<meta name="author" content="Francesc Bassas i Bullich">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<meta property="og:title"
+	        content="CiviCRM como herramienta de gestión para entidades de acción social">
+        <meta property="og:description"
+	        content="Las entidades de acción social que trabajan con distintos colectivos con riesgo de exclusión social tienen la oportunidad de mejorar su gestión gracias a herramientas tipo CiviCRM.">
+        <meta property="og:image"
+	        content="http://www.babu.cat/civicon-madrid2015/img/preview.png">
+
+        <!-- twitter meta -->
+        <meta name="twitter:card" content="photo">
+        <meta name="twitter:site" content="francescbassas">
+        <meta name="twitter:title" content="CiviCRM como herramienta de gestión para entidades de acción social">
+        <meta name="twitter:image:src" content="http://www.babu.cat/civicon-madrid2015/img/preview.png">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/babu.css" id="theme">
+		
+		<link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+		<link rel="icon" href="img/favicon.png" type="image/icon">
+
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		
+		<link href='fonts/YanoneKaffeesatzTTF/YanoneKaffeesatz.css' rel='stylesheet' type='text/css'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>
+					    <a href="https://madrid2015.civicrm.org/">
+							<img class="clean-image" width="400" height="52" data-src="img/civicon-madrid.png" alt="CiviCon Madrid 2015"/>
+						</a>
+					</h1>
+					<h2>«CiviCRM como herramienta de gestión para entidades de acción social»</h2>
+					<p>Powered by <a href="http://www.babu.cat">babu</a> | <a href="http://twitter.com/francescbassas">@francescbassas</a><br>
+						<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; box-shadow: none; background: transparent" src="img/cc-by-icons-30.png" /></a>
+					</p>
+				</section>
+				
+				<section data-transition="convex">
+				    <section>
+					    <h2>Un poco de mi</h2>
+        				<img width="150" height="150" src="img/francescbassas.jpg" alt="Francesc Bassas i Bullich">
+        				<p>Francesc Bassas i Bullich | <a href="http://www.babu.cat">www.babu.cat</a></p>
+					    <aside class="notes">Profesional de la informática especializado en la consultoría y el desarrollo web con amplia experiencia en el tercer sector, el mundo de la enseñanza y en la comunicación y publicidad digital.
+
+Participante y conocedor de la administración pública, del sector privado y afianzado finalmente como emprendedor autónomo, he formado equipo con un amplio abanico de profesionales, he conocido diferentes metodologías de trabajo y he contribuido en proyectos de naturalezas muy variadas.
+
+Defensor del software libre y de su filosofía que potencía el uso del software para el bien común, vivo convencido que el trabajo bien hecho, no solo garantiza la consecución de los objetivos sino que, además, deviene una valiosa inversión de futuro.</aside>
+				    </section>
+			    </section>
+			    <section data-transition="convex">
+				    <section>
+					    <h2>Un poco del sector Social SJ</h2>
+   					    <h3>(I) Comunidad y misión</h3>
+					        <p><img class="clean-image" width="408" height="123" src="img/jesuitas-social.png" alt="Jesuitas Social" style="vertical-align:middle;"></p>
+					        <div class="fragment" style="width:30%; display:inline-block;">
+					            <img class="fragmentclean-image" width="150" height="150" src="img/icon-cooperacion.png" alt="Cooperación">
+					            <div>Cooperación</div>
+				            </div>
+					        <div class="fragment" style="width:30%; display:inline-block;">
+           					    <img class="clean-image" width="150" height="150" src="img/icon-jovenes.png" alt="Menores">
+           					    <div>Menores</div>
+				            </div>
+       					    <div class="fragment" style="width:30%; display:inline-block;">
+           					    <img class="clean-image" width="150" height="150" src="img/icon-migraciones.png" alt="Migrantes">
+           					    <div>Migrantes</div>
+           					</div>
+      					    <p><a href="http://twitter.com/socialjesuitas" style="color:#B5BE00;">@socialjesuitas</a></p>
+
+					    <aside class="notes">El sector social de los jesuitas en España está formado por más de 20 entidades con más de 50 sedes distribuidas por todo el territorio nacional. El equipo que sostiene su misión está formado por 2.500 personas, de las cuales más del 80% son voluntarias, entre las que se encuentran un grupo de jesuitas. Las personas y familias que se benefician de nuestros servicios superan ampliamente el millón, distribuidas no sólo en España, sino en varios continentes.</aside>
+				    </section>
+				    <section>
+				        <h2>Un poco del sector Social SJ</h2>
+					    <h3>(II) Entidades del sector Social SJ en Catalunya</h3>
+					        <div style="width:30%; display:inline-block; vertical-align:middle;">
+					            <img class="clean-image" width="200" height="71" src="img/salut-alta.png" alt="Salut Alta">
+				            </div>
+					        <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="39" src="img/carles-blanch.png" alt="Carles Blanch">
+				            </div>
+       					    <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="97" src="img/migra-studium.png" alt="Migra Studium">
+           					</div>
+           					<div style="width:30%; display:inline-block; vertical-align:middle;">
+					            <img class="clean-image" width="200" height="72" src="img/la-vinya.png" alt="La Vinya">
+				            </div>
+					        <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="121" src="img/arrels-lleida.png" alt="Arrels Sant Ignasi">
+				            </div>
+       					    <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="33" src="img/cristianisme-i-justicia.png" alt="Cristianisme i Justícia">
+           					</div>
+				    </section>
+				    <section>
+                            <h2>Un poco del sector Social SJ</h2>
+                            <h3>(III) Principales líneas de actuación en Catalunya</h3>
+
+                            <ul>
+                                <li class="fragment">Apoyo socioeducativo a <strong>menores</strong>, <strong>adolescentes</strong> y <strong>jóvenes</strong> en riesgo social y actividades educativas en el tiempo libre</li>
+                                <li class="fragment"><strong>Atención</strong> social, psicológica y asesoría jurídica a población vulnerable
+                                <li class="fragment"><strong>Formación laboral</strong> a población vulnerable y en proceso de búsqueda de trabajo</li>
+                                <li class="fragment"><strong>Acogida sociolingüítica</strong> a población immigrante</li>
+                                <li class="fragment">Acompañamiento a personas internas en <strong>Centros de Internamiento de Extranjeros</strong></li>
+                                <li class="fragment"><strong>Banco de alimentos</strong></li>
+                                <li class="fragment"><strong>Reflexión</strong> social</li>
+                            </ul>
+                    </section>
+                </section>
+                <section data-transition="convex" data-markdown>
+                    <script type="text/template">
+                        ## Historia de un caso de éxito/s
+                        ![Ayuda](img/success-story.jpg)<!-- .element: class="clean-image" -->
+                        1. Punto de partida y motivación
+                        2. Implementación (Módulo Infancia)
+                        3. Otras implementaciones y retos futuros
+                        4. Logros y dificultades
+                    </script>
+                </section>
+
+                <section data-transition="convex">
+    				<section>
+					    <h2>Punto de partida y motivación</h2>
+					    <h3>¡Houston, tenemos un problema!</h3>
+					    <img class="clean-image" src="img/help.jpg" alt="Ayuda!">
+					</section>
+    				<section>
+					    <h2>De la dispersión a la centralización de los datos</h2>
+					    <h3>Caso típico (I)</h3>
+                        <blockquote>"Organización pequeña que va creciendo progresivamente incrementando a su vez la complejidad de su gestión como también la base de personas atendidas"</blockquote>
+					    <ul>
+                            <li class="fragment">
+                            Un amigo de la organización creó una base de datos personalizada para la gestión de los beneficiarios de la entidad.
+                            </li>
+                            <li class="fragment emphasis-negative">
+                            Necesitamos guardar a partir de ahora la edad de los beneficiarios. El que creó la base de datos a desaparecido y no sabemos como hacerlo.
+                            </li>
+                        </ul>
+					</section>
+					<section>
+					    <h2>De la dispersión a la centralización de los datos</h2>
+					    <h3>Caso típico (II)</h3>
+                        <blockquote>"Organización pequeña que va creciendo progresivamente incrementando a su vez la complejidad de su gestión como también la base de personas atendidas"</blockquote>
+					    <ul>
+                            <li class="fragment">Cada programa del centro tiene los datos de su red de contactos en una hoja de cálculo distinta.</li>
+                            <li class="fragment emphasis-negative">Estamos a punto de lanzar una campaña para recoger fondos para unos campamentos de verano y tendremos que abrir la hoja de cálculo de cada programa del centro, mezclar los contactos y vigilar que no hayan duplicados.
+                            </li>
+                        </ul>
+					</section>
+					<section>
+					    <h2>De la dispersión a la centralización de los datos</h2>
+					    <h3>Caso típico (III)</h3>
+                        <blockquote>"Organización pequeña que va creciendo progresivamente incrementando a su vez la complejidad de su gestión como también la base de personas atendidas"</blockquote>
+					    <ul>
+                            <li class="fragment">La responsable de voluntariado tiene un documento con todos los datos de los voluntarios.</li>
+                            <li class="fragment emphasis-negative">Se ha dado de baja un voluntario y nos iría bien hacer una llamada a los voluntarios que ya han pasado por el centro por si pueden cubrir esta plaza por el mes que queda. La responsable de voluntariado está de baja y no encontramos los datos de los voluntarios.</li>
+                        </ul>
+					</section>
+					<section>
+        				<h2>Cuando empieza a imperar el caos</h2>
+        				<h3>Llega al rescate</h3>
+					    <img class="fragment clean-image" style="vertical-align:middle;" src="img/civicrm-functionalities.png" alt="CiviCRM">
+				    </section>
+				    <section>
+					    <h2>Resultado</h2>
+					    <h3>Apuesta estratégica por <strong>CiviCRM</strong> como herramienta de gestión en 5 de las 6 entidades del sector social SJ</h3>
+					        <div style="width:30%; display:inline-block; vertical-align:middle;">
+					            <img class="clean-image" width="200" height="71" src="img/salut-alta.png" alt="Salut Alta">
+				            </div>
+					        <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="39" src="img/carles-blanch.png" alt="Carles Blanch">
+				            </div>
+       					    <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="97" src="img/migra-studium.png" alt="Migra Studium">
+           					</div>
+           					<div style="width:30%; display:inline-block; vertical-align:middle;">
+					            <img class="clean-image" width="200" height="72" src="img/la-vinya.png" alt="La Vinya">
+				            </div>
+       					    <div style="width:30%; display:inline-block; vertical-align:middle;">
+           					    <img class="clean-image" width="200" height="33" src="img/cristianisme-i-justicia.png" alt="Cristianisme i Justícia">
+           					</div>
+				    </section>
+				</section>
+			
+				<section data-transition="convex">
+				    <section>
+					    <h2>Implementación</h2>
+        				<h3>Módulo Infancia</h3>
+					    <img class="clean-image" src="img/where-to-start.png" alt="Por dónde empezamos?">
+				    </section>
+				    <section>
+					    <h2>El éxito de la implementación</h2>
+        				<h3>O porque no cumplir la carta a los reyes magos</h3>
+                        <blockquote>
+                            Adaptar al máximo los procesos de la organización a las capacidades de CiviCRM y NO que el CRM se tenga que adaptar a los procesos de la organización
+                        </blockquote>
+				    </section>
+				    <section>
+					    <h2>Implementación módulo infancia</h2>
+        				<h3>(I) Contactos</h3>
+        				<ul>
+        				    <li class="fragment">Tipos de contacto persona: <strong>niño</strong>; <strong>adulto</strong></li>
+        				    <li class="fragment">Tipos de contacto familia: <strong>unidad familiar y de convivencia</strong></li>
+           				    <li class="fragment">Tipos de contacto organización: <strong>centro educativo</strong></li>
+        				</ul>
+        				<blockquote class="fragment">
+        				    A cada tipo de contacto se le puede asignar uno o más conjuntos de campos personalizados.
+        				</blockquote>
+				    </section>
+				    <section>
+					    <h2>Implementación módulo infancia</h2>
+        				<h3>(II) Relaciones</h3>
+        				<ul>
+        				    <li class="fragment">Relaciones familiares: un niño <strong>es hijo de</strong> un adulto; un adulto <strong>es miembro de</strong> una unidad familiar y de convivencia</li>
+        				    <li class="fragment">Relaciones escolares: un niño <strong>estudia en</strong> un centro educativo</li>
+           				    <li class="fragment">Otras relaciones: un niño <strong>es beneficiario de una beca concedida por</strong> una organización; un niño <strong>recibe atención de</strong> una organización</li>
+        				</ul>
+        				<blockquote class="fragment">
+        				    Las relaciones también pueden tener uno o más conjuntos de campos personalizados.
+        				</blockquote>
+				    </section>
+				    <section>
+					    <h2>Implementación módulo infancia</h2>
+        				<h3>(III) Actividades</h3>
+        				<ul>
+        				    <li class="fragment">Actividades vinculadas a niños: <strong>registro de documentación</strong>; <strong>entrega de un cheque social</strong>; <strong>registro de resultados académicos</strong></li>
+        				    <li class="fragment">Actividades vinculadas a adultos: <strong>registro de situación económica</strong>; <strong>registro de situación laboral</strong></li>
+        				</ul>
+        				<blockquote class="fragment">
+        				    También! Las actividades pueden tener uno o más conjuntos de campos personalizados. Campos personalizados everywhere!
+        				</blockquote>
+				    </section>
+				    <section>
+					    <h2>Implementación módulo infancia</h2>
+        				<h3>(IV) Eventos</h3>
+        				<ol>
+        				    <li class="fragment">Creamos distintos <strong>tipos de eventos</strong> para los distintos programas de infancia del centro</li>
+        				    <li class="fragment">Creamos un <strong>evento</strong> para cada grupo. Por lo general el evento se extiende a lo largo de un curso</li>
+        				    <li class="fragment">Inscribimos a los niños como <strong>participantes</strong> del evento. Si es necesario podemos definir <strong>tarifas</strong> para el evento para registrar el pago de cuotas</li>
+    				    </ol>
+				    </section>
+				</section>
+				
+                <section data-transition="convex">
+                    <section>
+					    <h2>Otras implementaciones y retos futuros</h2>
+        				<h3>Un CiviUniverso de posibilidades</h3>
+					    <img class="clean-image" src="img/building.png" alt="Por dónde empezamos?">
+				    </section>
+				    <section>
+				        <h2>Otras implementaciones</h2>
+				        <ul>
+				            <li class="fragment">Módulo banco de alimentos</li>
+				            <li class="fragment">Módulo atención social</li>
+				            <li class="fragment">Módulo voluntarios</li>
+				            <li class="fragment">Módulo comunicación</li>
+				        </ul>
+				    </section>
+				    <section>
+				        <h2>Retos futuros</h2>
+				        <ul>
+				            <li class="fragment">Captación de fondos (socios, donantes, financiadores)</li>
+				            <li class="fragment">Integración con la web</li>
+				            <li class="fragment">Informes personalizados</li>
+				            <li class="fragment">Inscripciones a cursos y autorizaciones</li>
+				            <li class="fragment">Reportar, participar, colaborar y actualizar!</li>
+				        </ul>
+				    </section>
+				</section>
+				
+                <section data-transition="convex">
+                    <section>
+					    <h2>Logros y dificultades</h2>
+        				<h3>Algunos pros y contras a tener en cuenta</h3>
+					    <img class="clean-image" src="img/pros-cons.png" alt="Por dónde empezamos?">
+				    </section>
+		            <section>
+					    <h2>Dificultades</h2>
+        				<h3>Técnicas y de gestión de proyecto</h3>
+        				<ul>
+            				<li class="fragment">Cierre de las características de la implementación y migración de datos inicial</li>
+            				<li class="fragment">CiviCRM (ningún software) no es perfecto. Detección de bugs, algunos de solución con coste poco asumible para las organizaciones</li>
+            				<li class="fragment">Gestión engorrosa de controles de acceso a los datos</li>
+            				<li class="fragment">Reticencias iniciales de los usuarios (sobretodo perfiles con pocas habilidades con las TIC)</li>
+        				</ul>
+				    </section>
+		            <section>
+					    <h2>Logros</h2>
+        				<h3>Técnicos y de gestión de proyecto</h3>
+        				<ul>
+        				    <li class="fragment">Implementación prácticamente idéntica y sólida para las distintas organizaciones (<strong>suma de conocimiento y experiencias</strong>)</li>
+          				    <li class="fragment">Creación de <strong>sinergias</strong> entre entidades y <strong>unificación y estandarización</strong> de procesos comunes</li>
+        				    <li class="fragment">Ningún desarrollo a medida que pueda dificultar el mantenimiento y la actualización futura de la herramienta (<strong>puro CiviCRM</strong>)</li>
+        				    <li class="fragment">Increíble <strong>fortaleza de la comunidad CiviCRM</strong>: participación, foros, documentación, profesionales expertos, desarrollo y mantenimiento continuo del proyecto, etc.</li>
+        				</ul>
+				    </section>
+				</section>
+
+                <section data-transition="convex" data-background="img/that_s_all_folks-babu.gif">
+                </section>
+                <section data-transition="convex">
+                        <h2>Feel free to share!</h2>
+                        <img class="clean-image" width="300" height="300" src="img/babu-logo.png" alt="Enlace a la presentación">
+                        <img class="clean-image" width="300" height="300" src="img/qr.png" alt="Enlace a la presentación">
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				slideNumber: true,
+				history: true,
+				center: true,
+				touch: true,
+				fragments: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+		<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-53639516-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+	</body>
+</html>
