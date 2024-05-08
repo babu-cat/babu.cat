@@ -63,9 +63,9 @@ text-decoration: none;
 }
 
 .navbar-brand #logo {
-margin-top:5px;
+margin-top:10px;
 margin-right: 50px;
-height:40px;
+height:30px;
 }
 .navbar-nav>.active>a {
     color: #ffffff;
