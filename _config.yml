@@ -1,0 +1,7 @@
+exclude:
+  - src
+  - build.mjs
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - strict.json

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+	<meta charset="utf-8">
+	<title>{{ck_title}} · babu.cat</title>
+	<meta name="description" content="{{ck_meta_description}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#08080c">
+	<meta name="color-scheme" content="dark">
+	<meta name="robots" content="noindex, follow">
+	<link rel="canonical" href="{{url}}">
+	{{hreflang_links}}
+	<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/css/tailwind.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="/css/consent.css">
+	<link rel="icon" href="https://www.babu.cat/favicon.png" type="image/png">
+	<style>
+		body { background-color: #08080c; font-family: Inter, sans-serif; }
+		a:focus-visible, button:focus-visible { outline: 2px solid #f36538; outline-offset: 2px; }
+		.prose-babu a { color: #f36538; text-decoration: underline; text-underline-offset: 2px; }
+	</style>
+</head>
+<body class="text-gray-300 antialiased min-h-screen">
+	<main class="prose-babu max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+		<div class="flex flex-wrap items-center justify-between gap-4">
+			<a href="{{home}}" class="text-sm font-mono text-gray-400 hover:text-orange-400">&larr; {{ck_back}}</a>
+			{{lang_switcher}}
+		</div>
+		<h1 class="mt-6 text-3xl sm:text-4xl font-extrabold text-white">{{ck_title}}</h1>
+		<p class="mt-2 text-sm text-gray-400">{{ck_updated}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_controller}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_controller}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_what}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_what}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_stored}}</h2>
+		<div class="mt-4 overflow-x-auto" tabindex="0">
+			<table class="w-full text-sm text-left border-collapse">
+				<caption class="sr-only">{{ck_table_caption}}</caption>
+				<thead>
+					<tr class="border-b border-gray-700 text-gray-400">
+						<th scope="col" class="py-2 pr-4 font-semibold">{{ck_th_name}}</th>
+						<th scope="col" class="py-2 pr-4 font-semibold">{{ck_th_provider}}</th>
+						<th scope="col" class="py-2 pr-4 font-semibold">{{ck_th_purpose}}</th>
+						<th scope="col" class="py-2 font-semibold">{{ck_th_duration}}</th>
+					</tr>
+				</thead>
+				<tbody class="align-top">
+					<tr class="border-b border-gray-800">
+						<td class="py-3 pr-4 font-mono">_ga</td>
+						<td class="py-3 pr-4">Google Analytics</td>
+						<td class="py-3 pr-4">{{ck_ga_purpose}}</td>
+						<td class="py-3">{{ck_dur_2y}}</td>
+					</tr>
+					<tr class="border-b border-gray-800">
+						<td class="py-3 pr-4 font-mono">_ga_BSGMJPK87J</td>
+						<td class="py-3 pr-4">Google Analytics</td>
+						<td class="py-3 pr-4">{{ck_gas_purpose}}</td>
+						<td class="py-3">{{ck_dur_2y}}</td>
+					</tr>
+					<tr>
+						<td class="py-3 pr-4 font-mono">babu-consent-v1</td>
+						<td class="py-3 pr-4">{{ck_provider_site}}</td>
+						<td class="py-3 pr-4">{{ck_consent_purpose}}</td>
+						<td class="py-3">{{ck_dur_12m}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_withdraw}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_withdraw1}}</p>
+		<p class="mt-4"><button type="button" data-cc-open class="px-4 py-2 text-sm font-semibold rounded-lg bg-orange-600 hover:bg-orange-700 text-white transition">{{cookies_manage}}</button></p>
+		<p class="mt-4 leading-relaxed">{{ck_p_withdraw2}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_google}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_google}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_form}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_form}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_fonts}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_fonts}}</p>
+
+		<h2 class="mt-10 text-xl font-bold text-white">{{ck_h_claims}}</h2>
+		<p class="mt-3 leading-relaxed">{{ck_p_claims}}</p>
+	</main>
+	<script src="/js/consent.js" defer></script>
+	<script src="/js/langmenu.js" defer></script>
+</body>
+</html>

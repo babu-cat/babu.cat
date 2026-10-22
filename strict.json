@@ -1,0 +1,1 @@
+{ "root": true, "extends": ["html-validate:recommended","html-validate:a11y"], "rules": { "no-inline-style":"off", "attribute-boolean-style":"off", "void-style":"off", "no-self-closing":"off", "prefer-native-element":"off","no-trailing-whitespace":"off","attr-quotes":"off","element-case":"off","doctype-style":"off" } }

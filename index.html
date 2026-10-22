@@ -26,8 +26,9 @@
 
 	<link rel="canonical" href="https://www.babu.cat/">
 	<link rel="alternate" hreflang="ca" href="https://www.babu.cat/">
+	<link rel="alternate" hreflang="es" href="https://www.babu.cat/es/">
+	<link rel="alternate" hreflang="en" href="https://www.babu.cat/en/">
 	<link rel="alternate" hreflang="x-default" href="https://www.babu.cat/">
-	<!-- Quan hi hagi la versió castellana, afegir-hi: <link rel="alternate" hreflang="es" href="https://www.babu.cat/es/"> (i el mateix a la pàgina /es/) -->
 
 	<link rel="stylesheet" href="/css/tailwind.css">
 	<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,6 +39,7 @@
 	<link rel="icon" href="https://www.babu.cat/favicon.png" type="image/png">
 
 	<script src="/js/consent.js" defer></script>
+	<script src="/js/langmenu.js" defer></script>
 
 	<style>
 		:root {
@@ -1623,6 +1625,7 @@
 						<span class="w-2 h-2 rounded-full bg-orange-500 animate-ping"></span>
 						Desenvolupament web i transformació digital
 					</div>
+					<nav aria-label="Idioma" class="relative font-mono text-xs"><details class="lang-menu group"><summary aria-label="Idioma: Català" class="flex items-center gap-1 px-2 py-1.5 rounded-md text-gray-300 hover:text-orange-400 cursor-pointer list-none [&::-webkit-details-marker]:hidden"><span lang="ca">CA</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-open:rotate-180" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="absolute right-0 top-full mt-1 z-50 min-w-[3.5rem] py-1 rounded-lg border border-gray-700 bg-[#0c101a] shadow-xl"><a href="/es/" hreflang="es" lang="es" aria-label="Español" title="Español" class="block px-3 py-2 text-center text-gray-300 hover:text-orange-400 hover:bg-gray-800/70">ES</a><a href="/en/" hreflang="en" lang="en" aria-label="English" title="English" class="block px-3 py-2 text-center text-gray-300 hover:text-orange-400 hover:bg-gray-800/70">EN</a></div></details></nav>
 					<button type="button" data-contact
 						class="px-3.5 sm:px-4 py-2 text-xs font-semibold rounded-lg bg-orange-600 hover:bg-orange-700 text-white transition shadow-lg shadow-orange-600/30">
 						Contacta
@@ -1638,8 +1641,7 @@
 			<h1
 				class="reveal-element reveal-slide-left stagger-2 text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-5xl mb-6">
 				<span
-					class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-amber-200">Desenvolupament
-					web</span>, transformació digital i optimització de processos
+					class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-400 to-amber-200">Desenvolupament web</span>, transformació digital i optimització de processos
 			</h1>
 
 			<p id="loading-text"
@@ -1666,8 +1668,7 @@
 						</div>
 						<h2 class="text-2xl md:text-lg lg:text-2xl font-extrabold text-white mb-4">Desenvolupament web</h2>
 						<p class="text-base md:text-sm lg:text-base text-gray-300 leading-relaxed font-normal">
-							Creació i implantació de tot tipus de solucions web: des de pàgines web bàsiques, passant
-							per gestors de continguts avançats, entorns virtuals d'aprenentatge, CRM, etc.
+							Creació i implantació de tot tipus de solucions web: des de pàgines web bàsiques, passant per gestors de continguts avançats, entorns virtuals d'aprenentatge, CRM, etc.
 						</p>
 					</div>
 
@@ -1686,9 +1687,7 @@
 						</div>
 						<h2 class="text-2xl md:text-lg lg:text-2xl font-extrabold text-white mb-4">Consultoria TIC</h2>
 						<p class="text-base md:text-sm lg:text-base text-gray-300 leading-relaxed font-normal">
-							Serveis d'assessorament i acompanyament per oferir orientació, ajuda i suport en la
-							implementació i sistematització de processos com també en la definició i concreció
-							d'estratègies de comunicació digital i captació de fons.
+							Serveis d'assessorament i acompanyament per oferir orientació, ajuda i suport en la implementació i sistematització de processos com també en la definició i concreció d'estratègies de comunicació digital i captació de fons.
 						</p>
 					</div>
 
@@ -1706,8 +1705,7 @@
 						</div>
 						<h2 class="text-2xl md:text-lg lg:text-2xl font-extrabold text-white mb-4">Per al tercer sector</h2>
 						<p class="text-base md:text-sm lg:text-base text-gray-300 leading-relaxed font-normal">
-							Amb especial atenció a donar servei a aquells que treballen per al bé comú i per fer d'aquest
-							món un lloc millor.
+							Amb especial atenció a donar servei a aquells que treballen per al bé comú i per fer d'aquest món un lloc millor.
 						</p>
 					</div>
 
@@ -1720,10 +1718,8 @@
 				<div
 					class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8 pb-6 border-b border-gray-800/80">
 					<div>
-						<h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">Tecnologies i
-							plataformes</h2>
-						<p class="mt-2 text-gray-400">No existeix l'eina perfecta, però sí que existeix la manera òptima d'adaptar la millor eina
-							per a cada necessitat</p>
+						<h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">Tecnologies i plataformes</h2>
+						<p class="mt-2 text-gray-400">No existeix l'eina perfecta, però sí que existeix la manera òptima d'adaptar la millor eina per a cada necessitat</p>
 					</div>
 				</div>
 
@@ -1778,20 +1774,13 @@
 						</h2>
 
 						<p>
-							Com a professional autònom, he acompanyat més d'una desena d'organitzacions en la
-							modernització dels seus sistemes (CRM, entorns web i infraestructures), millorant la seva
-							visibilitat i eficiència en la gestió interna.
+							Com a professional autònom, he acompanyat més d'una desena d'organitzacions en la modernització dels seus sistemes (CRM, entorns web i infraestructures), millorant la seva visibilitat i eficiència en la gestió interna.
 						</p>
 						<p>
-							Participant i coneixedor de l'administració pública, del sector privat i consolidat
-							finalment com a emprenedor independent, he format equip amb un ampli ventall de professionals,
-							he conegut diferents metodologies de treball i he contribuït a projectes de naturaleses
-							molt variades.
+							Participant i coneixedor de l'administració pública, del sector privat i consolidat finalment com a emprenedor independent, he format equip amb un ampli ventall de professionals, he conegut diferents metodologies de treball i he contribuït a projectes de naturaleses molt variades.
 						</p>
 						<p>
-							Defensor del programari lliure i de la seva filosofia que potencia l'ús del programari per
-							al bé comú, treballo convençut que la feina ben feta no només garanteix la consecució dels
-							objectius, sinó que, a més a més, esdevé una valuosa inversió de futur.
+							Defensor del programari lliure i de la seva filosofia que potencia l'ús del programari per al bé comú, treballo convençut que la feina ben feta no només garanteix la consecució dels objectius, sinó que, a més a més, esdevé una valuosa inversió de futur.
 						</p>
 
 						<!-- Enllaç discret a La Babuteca i Xarxes Socials -->
@@ -1800,9 +1789,7 @@
 							<a href="https://www.babu.cat/babuteca" target="_blank" rel="noopener noreferrer"
 								class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-orange-400 font-mono transition-colors duration-200 group">
 								<span
-									class="underline decoration-gray-700 underline-offset-4 group-hover:decoration-orange-400 transition-colors">Visita
-									la <strong class="text-orange-500">babuteca</strong>. El meu racó per
-									compartir.</span>
+									class="underline decoration-gray-700 underline-offset-4 group-hover:decoration-orange-400 transition-colors">Visita la <strong class="text-orange-500">babuteca</strong>. El meu racó per compartir.</span>
 							</a>
 
 							<!-- Icones de Xarxes Socials -->
@@ -1846,7 +1833,7 @@
 
 
 		<footer class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-gray-400 text-xs font-mono">
-			<a href="/cookies/" class="hover:text-orange-400 underline underline-offset-2">Política de cookies</a>&nbsp;
+			<a href="/cookies/" class="hover:text-orange-400 underline underline-offset-2">Política de cookies</a>
 			<button type="button" data-cc-open class="hover:text-orange-400 underline underline-offset-2">Gestiona les cookies</button>
 		</footer>
 
@@ -1857,81 +1844,100 @@
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M2.5 6.3A2.3 2.3 0 0 1 4.8 4h14.4a2.3 2.3 0 0 1 2.3 2.3v.2L12 13 2.5 6.5v-.2z"/><path d="M2.5 9.1l8.9 6.1a1.1 1.1 0 0 0 1.2 0l8.9-6.1v8.6a2.3 2.3 0 0 1-2.3 2.3H4.8a2.3 2.3 0 0 1-2.3-2.3V9.1z"/></svg>
 		</button>
 
-		<script>
-			/* Formspree es carrega només quan l'usuari obre el formulari (cap petició a tercers abans). */
-			(function () {
-				var state = 'idle';
-				var cfg = {
-								theme: "classic",
-								action: "https://formspree.io/f/xoqyzpza",
-								title: "Digui?",
-								description: "Deixa'm un missatge i contactaré amb tu en breu.",
-								buttonImg: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='currentColor' aria-hidden='true'><path d='M2.5 6.3A2.3 2.3 0 0 1 4.8 4h14.4a2.3 2.3 0 0 1 2.3 2.3v.2L12 13 2.5 6.5v-.2z'/><path d='M2.5 9.1l8.9 6.1a1.1 1.1 0 0 0 1.2 0l8.9-6.1v8.6a2.3 2.3 0 0 1-2.3 2.3H4.8a2.3 2.3 0 0 1-2.3-2.3V9.1z'/></svg>",
-								fields: [
-									{
-										type: "email",
-										label: "El teu correu electrònic:",
-										name: "email",
-										required: true,
-									},
-									{
-										type: "textarea",
-										label: "Missatge:",
-										name: "message",
-									},
-									{
-										type: "submit",
-										value: "Envia"
-									}
-								],
-								styles: {
-									title: {
-										backgroundColor: "#DD5533"
-									},
-									button: {
-										backgroundColor: "#DD5533"
-									},
-									description: {
-										backgroundColor: "#EEE",
-										fontStyle: "italic"
-									},
-									closeButton: {
-										color: "#fff",
-									}
-								}
-							};
-				function openContact() {
-					if (state === 'loading') return;
-					if (state === 'ready') { window.formbutton('toggleForm'); return; }
-					state = 'loading';
-					window.formbutton = window.formbutton || function () { (window.formbutton.q = window.formbutton.q || []).push(arguments); };
-					window.formbutton('create', cfg);
-					window.formbutton('toggleForm');
-					var sc = document.createElement('script');
-					sc.src = 'https://formspree.io/js/formbutton-v1.min.js';
-					sc.async = true;
-					sc.onload = function () {
-						state = 'ready';
-						requestAnimationFrame(function () {
-							var fab = document.getElementById('contactFab');
-							if (fab) fab.remove();
-						});
-					};
-					sc.onerror = function () {
-						state = 'idle';
-						sc.remove();
-						delete window.formbutton;
-					};
-					document.head.appendChild(sc);
-				}
-				document.addEventListener('click', function (e) {
-					if (e.target.closest('[data-contact]')) { e.preventDefault(); openContact(); }
-				});
-			})();
-		</script>
 
 	</div>
 
+
+	<!-- Formulari de contacte (diàleg natiu; s'envia a Formspree només en prémer «Envia») -->
+	<dialog id="contactDialog" aria-labelledby="contactTitle"
+		class="m-auto w-[calc(100vw-2rem)] max-w-md p-0 rounded-2xl overflow-hidden border border-gray-700 bg-[#0c101a] text-gray-200 shadow-2xl backdrop:bg-black/70 backdrop:backdrop-blur-sm">
+		<div class="flex items-start justify-between gap-4 px-5 py-4 bg-[#DD5533] text-white">
+			<h2 id="contactTitle" class="text-lg font-extrabold">Digui?</h2>
+			<button type="button" data-contact-close aria-label="Tanca"
+				class="-mr-1 -mt-1 p-1.5 rounded-lg hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+			</button>
+		</div>
+		<p id="cf-desc" class="px-5 py-3 text-sm bg-gray-800/60 text-gray-300">Deixa'm un missatge i contactaré amb tu en breu.</p>
+		<form id="contactForm" action="https://formspree.io/f/xoqyzpza" method="post" class="px-5 py-5 space-y-4">
+			<div>
+				<label for="cf-email" class="block text-sm font-semibold mb-1.5">El teu correu electrònic:</label>
+				<input id="cf-email" name="email" type="email" required autocomplete="email"
+					class="w-full px-3 py-2 rounded-lg bg-gray-900 border border-gray-600 text-white focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/40">
+			</div>
+			<div>
+				<label for="cf-message" class="block text-sm font-semibold mb-1.5">Missatge:</label>
+				<textarea id="cf-message" name="message" rows="5" required
+					class="w-full px-3 py-2 rounded-lg bg-gray-900 border border-gray-600 text-white focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/40"></textarea>
+			</div>
+			<div class="absolute -left-[9999px]" aria-hidden="true">
+				<input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+			</div>
+			<p id="cf-status" class="text-sm min-h-[1.25rem]" role="status"></p>
+			<button type="submit" id="cf-submit"
+				class="w-full px-4 py-2.5 text-sm font-semibold rounded-lg bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white transition">Envia</button>
+			<p class="text-xs text-gray-400">En enviar el formulari, les dades es tracten a través de Formspree. <a class="underline text-orange-400" href="/cookies/">Més informació</a>.</p>
+		</form>
+		<div id="cf-done" hidden class="px-5 py-8 text-center">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4 text-emerald-400" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+			<p id="cf-ok" tabindex="-1" role="status" class="text-base font-semibold text-emerald-400 focus:outline-none">Gràcies! He rebut el teu missatge i et respondré aviat.</p>
+			<button type="button" data-contact-close
+				class="mt-6 px-6 py-2.5 text-sm font-semibold rounded-lg bg-orange-600 hover:bg-orange-700 text-white transition">Tanca</button>
+		</div>
+	</dialog>
+
+	<script>
+		(function () {
+			var dlg = document.getElementById('contactDialog');
+			var form = document.getElementById('contactForm');
+			var desc = document.getElementById('cf-desc');
+			var done = document.getElementById('cf-done');
+			var okMsg = document.getElementById('cf-ok');
+			var status = document.getElementById('cf-status');
+			var btn = document.getElementById('cf-submit');
+			var TXT = { sending: "Enviant...", err: "No s'ha pogut enviar el missatge. Torna-ho a provar d'aquí una estona." };
+
+			function setStatus(msg, cls) {
+				status.textContent = msg;
+				status.className = 'text-sm min-h-[1.25rem] ' + (cls || '');
+			}
+			function showForm() {
+				form.hidden = false; desc.hidden = false; done.hidden = true;
+			}
+			function showDone() {
+				form.hidden = true; desc.hidden = true; done.hidden = false;
+				form.reset(); setStatus('');
+				okMsg.focus();
+			}
+			function openContact() {
+				if (typeof dlg.showModal !== 'function') { window.location.href = form.action; return; }
+				if (!dlg.open) { showForm(); dlg.showModal(); }
+			}
+			document.addEventListener('click', function (e) {
+				if (e.target.closest('[data-contact]')) { e.preventDefault(); openContact(); }
+				else if (e.target.closest('[data-contact-close]') || e.target === dlg) dlg.close();
+			});
+			form.addEventListener('submit', function (e) {
+				e.preventDefault();
+				var data = new FormData(form);
+				if (data.get('_gotcha')) { dlg.close(); return; }   // bot: es descarta en silenci
+				btn.disabled = true;
+				setStatus(TXT.sending, 'text-gray-300');
+				fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+					.then(function (r) {
+						return r.json().catch(function () { return null; }).then(function (j) {
+							var bad = !r.ok || (j && (j.ok === false || (j.errors && j.errors.length)));
+							if (bad) { console.warn('Formspree:', r.status, j); throw new Error('send'); }
+						});
+					})
+					.then(function () { btn.disabled = false; showDone(); })
+					.catch(function () {
+						setStatus(TXT.err, 'text-red-400 font-semibold');
+						btn.disabled = false;
+					});
+			});
+		})();
+	</script>
 
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,14 @@
+{
+  "name": "babu-web",
+  "private": true,
+  "scripts": {
+    "build:html": "node build.mjs",
+    "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify",
+    "build": "npm run build:html && npm run build:css"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "html-validate": "^11.16.4",
+    "tailwindcss": "^3.4.19"
+  }
+}

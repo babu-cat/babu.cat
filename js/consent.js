@@ -7,6 +7,29 @@
   var MAX_AGE = 365 * 24 * 3600 * 1000; // 12 mesos
   var loaded = false;
 
+  // Textos del banner per idioma (l'idioma ve de <html lang>)
+  var TEXT = {
+    ca: {
+      title: 'Cookies d’analítica',
+      text: 'Faig servir Google Analytics per saber, de manera agregada, com es fa servir aquesta web. Només s’activa si ho acceptes.',
+      more: 'Més informació', reject: 'Rebutja', accept: 'Accepta', policyUrl: '/cookies/'
+    },
+    es: {
+      title: 'Cookies de analítica',
+      text: 'Uso Google Analytics para saber, de forma agregada, cómo se utiliza este sitio. Solo se activa si lo aceptas.',
+      more: 'Más información', reject: 'Rechazar', accept: 'Aceptar', policyUrl: '/es/cookies/'
+    },
+    en: {
+      title: 'Analytics cookies',
+      text: 'I use Google Analytics to understand, in aggregate, how this site is used. It is only enabled if you accept.',
+      more: 'More information', reject: 'Reject', accept: 'Accept', policyUrl: '/en/cookies/'
+    }
+  };
+  function lang() {
+    var l = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
+    return TEXT[l] ? l : 'ca';
+  }
+
   function read() {
     try {
       var d = JSON.parse(localStorage.getItem(KEY));
@@ -69,12 +92,12 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-labelledby', 'cc-title');
     banner.setAttribute('aria-describedby', 'cc-text');
+    var t = TEXT[lang()];
     banner.innerHTML =
-      '<h2 id="cc-title">Cookies d\'analítica</h2>' +
-      '<p id="cc-text">Faig servir cookies d\'analícia per saber, de manera agregada, com es fa servir aquesta web. ' +
-      'Només s\'activa si ho acceptes. <a href="/cookies/">Més informació</a>.</p>' +
-      '<div class="cc-actions"><button type="button" data-cc="denied">Rebutja</button>' +
-      '<button type="button" data-cc="granted">Accepta</button></div>';
+      '<h2 id="cc-title">' + t.title + '</h2>' +
+      '<p id="cc-text">' + t.text + ' <a href="' + t.policyUrl + '">' + t.more + '</a>.</p>' +
+      '<div class="cc-actions"><button type="button" data-cc="denied">' + t.reject + '</button>' +
+      '<button type="button" data-cc="granted">' + t.accept + '</button></div>';
     banner.addEventListener('click', function (e) {
       var b = e.target.closest('[data-cc]');
       if (b) decide(b.getAttribute('data-cc'));
